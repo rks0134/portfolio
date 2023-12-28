@@ -98,6 +98,15 @@ body.dark-theme {
 .change-theme:hover {
   color: var(--first-color);
 }
+body.dark-theme .nav__logo img {
+  filter: 
+    drop-shadow(0 0 2px #5457d8) 
+    drop-shadow(0 0 2px #5457d8) 
+    drop-shadow(0 0 2px #5457d8) 
+    drop-shadow(0 0 2px #5457d8); /* Additional glow effect */
+}
+
+
 
 /*================= Base ===============*/
 * {
@@ -437,6 +446,11 @@ img {
 
 .skills__container {
   row-gap: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+  gap: 1rem; /* Adjust the gap as needed */
+  padding-left: 2.7rem;
 }
 
 .skills__header {
@@ -445,6 +459,10 @@ img {
   margin-bottom: var(--mb-2-5);
   cursor: pointer;
 }
+.skills__header--left {
+  margin-top: 40px; /* Adjust the value as needed */
+}
+
 
 .skills__icon,
 .skills__arrow {
@@ -468,6 +486,10 @@ img {
 .skills__list {
   row-gap: 0.65rem;
   padding-left: 2.7rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  grid-template-rows: repeat(3, auto); /* 3 rows, height as per content */
+  gap: 1rem; /* Adjust the gap as needed */
 }
 
 .skills__titles {
@@ -484,6 +506,7 @@ img {
   /* Basic styling */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer; /* Indicates the item is interactive */
+  /* Add any specific styling you need for these items */
 }
 
 .skills__data:hover {
