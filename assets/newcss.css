@@ -1288,19 +1288,3 @@ img {
   }
 }
 
-/* Dark theme styles */
-.dark-theme {
-  background-color: #1c1c1c; /* Or any dark color */
-  color: #ffffff; /* Or any light color */
-}
-
-/* Other elements that need to change in dark mode */
-.dark-theme a,
-.dark-theme p,
-.dark-theme h1,
-.dark-theme h2,
-.dark-theme h3 {
-  color: #ffffff; /* Or any light color */
-}
-
-/* More dark theme styles as needed */
