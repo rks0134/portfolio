@@ -220,6 +220,10 @@ img {
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
+.nav__link.active-link {
+  color: #5457d8; /* or any style you prefer */
+}
+
 
 .nav__link:hover {
   color: var(--first-color);

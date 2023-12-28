@@ -926,13 +926,36 @@
     <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
     <script src="assets/ptj.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    const themeButton = document.getElementById('theme-button'); // Adjust if necessary
-    themeButton.addEventListener('click', function() {
-        document.body.classList.toggle('dark-theme');
+        document.addEventListener('DOMContentLoaded', function() {
+        const themeButton = document.getElementById('theme-button'); // Adjust if necessary
+        themeButton.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+        });
     });
-});
-
     </script>
+    <script>
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav__link');
+    
+        let current = '';
+    
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+            current = section.getAttribute('id');
+          }
+        });
+    
+        navLinks.forEach(link => {
+          link.classList.remove('active-link');
+          if (link.href.includes(current)) {
+            link.classList.add('active-link');
+          }
+        });
+      });
+    </script>
+    
   </body>
 </html>
