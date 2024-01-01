@@ -6,6 +6,8 @@
     "disown-opener": "off",
     "axe/forms": "off",
     "axe/name-role-value": "off",
-    "highest-available-document-mode": "off"
+    "highest-available-document-mode": "off",
+    "no-inline-styles": "off",
+    "compat-api/css": "off"
   }
 }
